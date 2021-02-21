@@ -1,0 +1,524 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+body a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+    list-style-type: none;
+}
+
+header{
+    background: rgba(100, 148, 237, 0.459);   
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+
+.title-header{
+    margin-left: 30%;
+}
+/********************NAVIGATION*******************/
+
+header nav{
+    
+    position: absolute;
+    padding-left: 10px;
+    left: 0;
+    padding-top: 10px;
+    top: 0;
+}
+header nav li{
+    list-style-type: none;
+}
+.liste-items{   
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    line-height: 50px;
+}
+.items{
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: large;
+    z-index: 1;
+}
+.sous-list{
+    position: relative;
+    top: 1.8vh;
+    left: -30px;
+    display: none;
+    transition: ease-in-out;
+}
+.items-sous-list{   
+    text-align: center;
+    padding: 0 10px;    
+    border-bottom: 0.5px solid rgb(167 167 167);
+}
+.items-sous-list:hover{
+    background: rgba(100, 148, 237, 0.459); 
+}
+.items:hover > ul{
+    display: block;
+    background: rgba(100, 148, 237, 0.459); 
+}
+.items-sous-list:nth-child(3){
+    position: relative;
+}
+.sous-list2{
+    position: absolute;
+    top: 0;
+    left: 105px;
+    width: 200px;
+    display: none;
+    transition: ease-in-out;   
+}
+.items-sous-list2{  
+    text-align: center;
+    padding: 0 10px;    
+    border-bottom: 0.5px solid rgb(167 167 167);
+    z-index: 1; 
+}
+.items-sous-list2:hover{
+    background: rgba(100, 148, 237, 0.842); 
+}
+.items-sous-list:hover > ul{
+    display: block;
+    background: rgba(100, 148, 237, 0.842); 
+}
+
+/*************************MAIN ACCUEIL******************/
+#accueil{
+    display: block;
+}
+.banniere-accueil{   
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+}
+.img-banniere-accueil{
+    z-index: -1;
+}
+.text-banniere-accueil{
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 80px 150px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+}
+.text-banniere-accueil h2{
+    margin-bottom: 10px;
+}
+.text-banniere-accueil h3{
+    margin-bottom: 20px;
+}
+.info{
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-top: 150px;
+    width: 40%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.tel, .horaires, .rdv{
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 80px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+}
+.tel h3, .horaires h3, .rdv h3{
+    margin-bottom: 20px;
+}
+/*************************MAIN SOIN***************/
+#services{
+    display: none;
+}
+.soin{
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+    
+}
+.soin-title{
+    text-align: center;
+    padding-top: 10px;   
+}
+.soin-title h3{
+    margin-top: 10px;
+}
+.soin-container{
+    margin: 30px;
+    margin-top: 90px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.soin-list{
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 80px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 300px;
+    height: 30vh;
+}
+.soin h4{
+    margin-bottom: 40px;
+}
+/**************APROPOS*********/
+
+.a-propos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+.a-propos-container{    
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 800px;
+    height: 15vh;
+}
+.a-propos-container h3{
+    margin-bottom: 20px;
+}
+.a-propos-container2{   
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 400px;
+    height: 15vh;
+}
+.a-propos-container2 h4{
+    margin-bottom: 20px;
+}
+
+/**********************PRENDRE RDV****************/
+#appointment{
+    display: none;
+}
+
+.formulaire-container{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+}
+.formulaire{
+    margin-left: 200px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 400px;
+    height: 50vh;
+}
+.formulaire h3{
+    margin-bottom: 80px;
+}
+.formulaire input{
+    margin-bottom: 20px;
+    width: 200px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+}
+.formulaire button{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(250, 114, 220);
+    border: 1px solid rgba(250, 114, 220, 0.432);
+}
+.formulaire input:focus{
+    border: 2px solid rgb(100, 148, 237);
+}
+.formulaire-img{
+    height: 72vh;
+    margin-right: 20px;
+}
+
+
+/************************APPLI********************/
+#application{
+    display: none;
+}
+.appli{
+    
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+}
+
+.appli-container{
+    margin-right: 200px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 400px;
+    height: 50vh;
+}
+.appli-container h3{
+    margin-bottom: 80px;
+}
+.appli-container p{
+    margin-bottom: 20px;
+}
+.appli-lien{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/************************MEDECIN********************/
+#doctors{
+    display: none;
+}
+.medecin{    
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+}
+.medecin-title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.medecin-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.medecin-block h4{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.medecin-block h6{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: large;
+}
+.medecin-img{
+    height: 60vh;
+    width: auto;
+}
+.medecin-block{
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 450px;
+    height: 67vh;
+    position: relative;
+}
+
+/*************************BLOG*********************/
+#news{
+    display: none;
+}
+.blog{
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+}
+.blog-title{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+}
+.blog-article1{
+    position: absolute;
+    top: 70px;
+    left: 5%;
+}
+.blog-article2{
+    position: absolute;
+    top: 280px;
+    left: 40%;
+}
+.blog-article3{
+    position: absolute;
+    top: 70px;
+    left: 65%;
+}
+.blog-img{
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 20px 5px 40px -6px rgba(100, 148, 237, 0.603);
+}
+.article-lien{   
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 500px;
+    height: 10vh;
+}
+
+/**********************CONTACT****************/
+#contact{
+    display: none;
+}
+.contact{
+    background-color: rgba(100, 148, 237, 0.219) ;
+    position: relative;
+    width: 100%;
+    height: 72vh;   
+}
+.contact-title{
+    position: absolute;
+    left: 40%;
+    top: 20px;
+}
+.contact-formulaire{
+    position: absolute;
+    left: 40%;
+    top: 100px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: rgba(100, 148, 237, 0.219) ;
+    text-align: center;
+    box-shadow: 20px 20px 40px -6px rgba(100, 148, 237, 0.603);
+    width: 400px;
+    height: 50vh;
+}
+.contact-formulaire h3{
+    margin-bottom: 50px;
+}
+.contact-formulaire input{
+    margin-bottom: 20px;
+    width: 200px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+}
+.contact-formulaire textarea{
+    margin-bottom: 20px;
+    height: 100px;    
+    width: 300px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 148, 237, 0.459);
+}
+.contact-formulaire button{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(250, 114, 220);
+    border: 1px solid rgba(250, 114, 220, 0.432);
+}
+.contact-formulaire input:focus{
+    border: 2px solid rgb(100, 148, 237);
+}
+/*************************FOOTER******************/
+
+footer{
+    background: rgba(100, 148, 237, 0.459);   
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    
+}
+footer nav li{
+    list-style-type: none;
+}
+footer nav h3{
+    margin-bottom: 10px;
+}
+.footer-contact{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.footer-nav1{
+    position: absolute;
+    left: 20%;
+    top: 20px;
+     line-height: 20px;   
+}
+.footer-nav2{
+    position: absolute;
+    left:30%;
+    top: 20px;
+    line-height: 20px;
+}
+.temoignage{
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+.temoignage p{
+    margin-right: 10px;
+}
+.temoignage img{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.chiffre{
+    position: absolute;
+    left: 80%;
+}
+.chiffre h3{
+    margin-bottom: 10px;
+}
+.chiffre-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reserve{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
